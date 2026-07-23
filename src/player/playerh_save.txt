@@ -1,0 +1,76 @@
+
+
+#ifndef PLAYER
+#define PLAYER
+
+#include <array>
+#include <unordered_set>
+#include <armadillo>
+#include "../policy/policy.h"
+#include "../utils/utils.h"
+#include "../utils/deck.h"
+
+
+class GameEngine {
+
+public:
+
+	void play_card(int card, int n_frontier, PlayerType player);
+
+	int draw_card(PlayerType player);
+
+	//bool end_turn(PlayerType player);
+
+};
+
+class Player {
+
+public:
+	Player();
+	virtual ~Player();
+
+	Policy* policy;
+
+	GameEngine* owningGame;;
+
+	Deck<6> cards;
+
+	std::unordered_set<int> remaining_cards;
+
+	PlayerType playerID;
+	bool isLinked;
+
+	// Toutes les fonctions pourraient être virtuelles 
+
+	// Fonction à conserver ici
+	void distribuer_cartes(int* cards);
+
+	bool hasCard(int card);
+
+	bool link(GameEngine* game, PlayerType id);
+
+	// Réimplémenter ici
+	virtual void reset();
+
+	// Doit être implémenté
+	virtual void win(PlayerType playerID);
+
+	// Doit être réimplenté
+	// La version ici doit être déplacé dans agent
+	virtual void play();
+
+	// After the turn of the other player only
+	// Doit être réimplenté 
+	// La version ici doit être déplacé dans agent
+	virtual void update_adversary_card_played(int card, int n_frontier, PlayerType player);
+
+	// Doit être réimplémenté 
+	// La version ici doit être déplacé dans agent 
+	virtual void winFrontier(int n_frontier, PlayerType player);
+
+	// Doit être réimplenté
+	virtual std::array<int, 2> choose_cardNumber_pos();
+
+};
+
+#endif

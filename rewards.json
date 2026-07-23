@@ -1,0 +1,170 @@
+{
+  "scheme": {
+    "frontiereGagne": {
+      "base": 4,
+      "somme": 0,
+      "suite": 1,
+      "couleur": 2,
+      "brelan": 4,
+      "suite_couleur": 6
+    },
+    "frontierePerdue": {
+      "base": -5,
+      "somme": -3,
+      "suite": -2,
+      "couleur": -1,
+      "brelan": 0.5,
+      "suite_couleur": 1.5
+    },
+    "finPartie": {
+      "victoire": 30, // +25
+      "defaite": -30, // -25
+      "egalite": -10,
+      "+1byfrontier": true
+      // difference entre win 3 et win 5 ?
+    },
+    "combinaisonTerminee": {
+      "base": 0,
+      "somme": -3,
+      "suite": -2,
+      "couleur": 0,
+      "brelan": 5,
+      "suite_couleur": 10
+    },
+    "deuxiemeCarteJouee": {
+      "tours_restants": 18,
+      "memeCV": 10,
+      "negatif": -25
+    }
+
+  },
+
+  "premiere_implementation": {
+
+    "frontiereGagne": {
+      "base": 4,
+      "somme": 0,
+      "suite": 1,
+      "couleur": 2,
+      "brelan": 4,
+      "suite_couleur": 6
+    },
+    "frontierePerdue": {
+      "base": -5,
+      "somme": -3,
+      "suite": -2,
+      "couleur": -1,
+      "brelan": 0.5,
+      "suite_couleur": 1.5
+    },
+    "finPartie": {
+      "victoire": 25,
+      "defaite": -25,
+      "egalite": -10,
+      "+1byfrontier": true
+      // difference entre win 3 et win 5 ?
+    },
+    "combinaisonTerminee": {
+      "base": 0,
+      "somme": -3,
+      "suite": -2,
+      "couleur": 0,
+      "brelan": 5,
+      "suite_couleur": 10
+    },
+    // n'existe pas
+    "deuxiemeCarteJouee": {
+      "tours_restants": 18,
+      "memeCV": 10,
+      "negatif": -25
+    }
+
+  },
+
+  "current": {
+    "normalization_factor": 5,
+    "frontiereGagne": {
+      "base": 15,
+      "somme": -5,
+      "suite": -2,
+      "couleur": 2,
+      "brelan": 7,
+      "suite_couleur": 10
+    },
+    "frontierePerdue": {
+      "base": -15,
+      "somme": -7,
+      "suite": -4,
+      "couleur": 2,
+      "brelan": 7,
+      "suite_couleur": 10
+    },
+    "finPartie": {
+      "victoire": 50,
+      "defaite": -50,
+      "egalite": -25,
+      "+1byfrontier": true
+      // difference entre win 3 et win 5 ?
+    },
+    "combinaisonTerminee": {
+      "base": 0,
+      "somme": -9,
+      "suite": -4.5,
+      "couleur": 0,
+      "brelan": 4.5,
+      "suite_couleur": 9
+    },
+    "deuxiemeCarteJouee": {
+      "tours_restants": 18,
+      // n'existait pas avant
+      "memeCV": 10,
+      "negatif": -10
+    }
+  },
+
+  "winAgainstRandom": {
+    "normalization_factor": 3,
+    "frontiereGagne": {
+      "base": 15,
+      "somme": -4,
+      "suite": -2,
+      "couleur": 1,
+      "brelan": 3,
+      "suite_couleur": 4
+    },
+    "frontierePerdue": {
+      "base": -15,
+      "somme": -4,
+      "suite": -2,
+      "couleur": 0,
+      "brelan": 2,
+      "suite_couleur": 4
+    },
+    "finPartie": {
+      "victoire": 35,
+      "defaite": -35,
+      "egalite": -15,
+      "+1byfrontier": true
+      // difference entre win 3 et win 5 ?
+    },
+    "combinaisonTerminee": {
+      "base": 0,
+      "somme": -5,
+      "suite": -2,
+      "couleur": 2,
+      "brelan": 4,
+      "suite_couleur": 7
+    },
+    "deuxiemeCarteJouee": {
+      "tours_restants": 18,
+      // n'existait pas avant
+      "memeCV": 5,
+      "negatif": -5
+    }
+  }
+
+
+
+
+}
+
